@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka" />
+        <module name="configServer" />
+        <module name="ApiGateway" />
       </profile>
       <profile name="Annotation profile for AIService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -17,16 +19,27 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
         <module name="activity" />
-        <module name="UserService" />
         <module name="AIService" />
+      </profile>
+      <profile name="Annotation profile for UserService" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="UserService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AIService" options="-parameters" />
+      <module name="ApiGateway" options="-parameters" />
       <module name="UserService" options="-parameters" />
       <module name="activity" options="-parameters" />
+      <module name="configServer" options="-parameters" />
       <module name="eureka" options="-parameters" />
     </option>
   </component>
