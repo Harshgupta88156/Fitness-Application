@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: configServer
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations : classpath:/config
+
+
+
+
+
+
+server:
+  port: 8888   # recommended default port for config server
