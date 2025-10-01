@@ -1,0 +1,205 @@
+/* App.css */
+
+/* ---------- GLOBAL ---------- */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+}
+
+/* ---------- LOGIN PAGE ---------- */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  width: 100vw;
+  position: relative;
+}
+
+.login-page::before,
+.login-page::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  background: #1a237e;
+  z-index: 0;
+}
+
+.login-page::before {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -150px;
+}
+
+.login-page::after {
+  width: 500px;
+  height: 500px;
+  bottom: -200px;
+  right: -200px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 50px 60px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 380px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  z-index: 1;
+}
+
+.login-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.brand-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1a237e;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.brand-subtitle {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 35px;
+  line-height: 1.4;
+}
+
+.login-btn {
+  background: linear-gradient(45deg, #1a237e, #3f51b5);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 12px 35px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(63, 81, 181, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.login-btn:hover {
+  background: linear-gradient(45deg, #303f9f, #5c6bc0);
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(63, 81, 181, 0.6);
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 40px 30px;
+  }
+  .brand-title {
+    font-size: 2rem;
+  }
+  .login-btn {
+    width: 100%;
+  }
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1a237e, #3f51b5);
+  padding: 15px 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.navbar button {
+  background: #ff5252 !important;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 8px 20px;
+  transition: all 0.3s;
+}
+
+.navbar button:hover {
+  background: #e53935 !important;
+  transform: scale(1.05);
+}
+
+/* ---------- ACTIVITIES PAGE ---------- */
+.activities-container {
+  min-height: 100vh;
+  background: #f4f6f8;
+  padding: 40px;
+}
+
+.activities-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activities-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.activities-card h2 {
+  margin-bottom: 20px;
+  color: #1a237e;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* ---------- ACTIVITY FORM ---------- */
+.MuiTextField-root {
+  margin-bottom: 20px !important;
+}
+
+.MuiButton-containedPrimary {
+  background: linear-gradient(45deg, #1a237e, #3f51b5) !important;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.MuiButton-containedPrimary:hover {
+  background: linear-gradient(45deg, #303f9f, #5c6bc0) !important;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(63, 81, 181, 0.4);
+}
+
+/* ---------- ACTIVITY LIST ITEMS ---------- */
+.activity-item {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.3s;
+}
+
+.activity-item:hover {
+  background: #f9f9ff;
+}
+
+.activity-title {
+  font-weight: 600;
+  color: #1a237e;
+}
+
+.activity-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
