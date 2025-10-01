@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/activities")
 public class ActivityController {
@@ -20,5 +22,10 @@ public class ActivityController {
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest activityRequest, @RequestHeader("X-User-ID") String userId ){
         activityRequest.setUserId(userId);
         return ResponseEntity.ok(activityService.trackActivity(activityRequest));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<ActivityResponse>> getUserActivities(@RequestHeader("X-User-ID") String userId ){
+        return ResponseEntity.ok(activityService.getUserActivities(userId));
     }
 }
