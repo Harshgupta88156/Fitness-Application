@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, Divider, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router';
 import { getActivityDetails } from '../services/api';
 
