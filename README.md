@@ -26,44 +26,5 @@ A comprehensive microservices-based fitness tracking application with AI-powered
 
 <img width="1142" height="547" alt="Screenshot (802)" src="https://github.com/user-attachments/assets/1b0600c0-2d87-497e-93f3-8aa82922f0d3" />
 
-## ✨ Project Structure
 
-fitlife-project/
-├── fitness-frontend/          # React frontend application
-│   ├── src/
-│   │   ├── components/        # Reusable UI components
-│   │   ├── services/          # API services
-│   │   ├── store/             # Redux store
-│   │   └── App.jsx            # Main app component
-│   ├── Dockerfile             # Frontend Docker configuration
-│   └── package.json           # Frontend dependencies
-├── activity/                  # Activity microservice
-│   ├── src/main/java/
-│   ├── Dockerfile
-│   └── pom.xml
-├── AIService/                 # AI recommendations service
-│   ├── src/main/java/
-│   ├── Dockerfile
-│   └── pom.xml
-├── UserService/               # User management service
-│   ├── src/main/java/
-│   ├── Dockerfile
-│   └── pom.xml
-├── ApiGateway/                # API Gateway service
-│   ├── src/main/java/
-│   ├── Dockerfile
-│   └── pom.xml
-├── configServer/              # Configuration server
-│   ├── src/main/resources/config/
-│   ├── Dockerfile
-│   └── pom.xml
-├── eureka/                    # Service discovery server
-│   ├── src/main/java/
-│   ├── Dockerfile
-│   └── pom.xml
-├── docker-compose.yml         # Infrastructure services
-├── docker-compose-full.yml    # Complete application stack
-├── start-app.sh               # Linux/Mac startup script
-├── start-app.bat              # Windows startup script
-└── README.md                  # This file
 
